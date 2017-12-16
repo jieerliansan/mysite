@@ -10,6 +10,7 @@ def index(request):
         password = request.POST.get("password", None)
         u = models.UserInfo(user=username, pwd=password)
         u.save()
-    user_list = models.UserInfo.objects.all()
+    #user_list = models.UserInfo.objects.all()
     #return HttpResponse("<p>数据添加成功！</p>")
+    user_list = None
     return render(request, "index.html",{"data": user_list})

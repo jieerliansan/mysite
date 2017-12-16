@@ -20,7 +20,12 @@ class ProductAdmin(admin.ModelAdmin):
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ('title', 'content','date')  # list
     #inlines = [ProductInline ]
-    pass
+    class Media:
+        js = (
+            '/static/js/kindeditor-4.1.10/kindeditor-min.js',
+            '/static/js/kindeditor-4.1.10/lang/zh_CN.js',
+            '/static/js/kindeditor-4.1.10/config.js',
+        )
 
 
 admin.site.site_header = 'Touch管理系统'
