@@ -193,7 +193,7 @@ KindEditor.plugin('image', function(K) {
 				if (data.error === 0) {
 					var url = data.url;
 					if (formatUploadUrl) {
-						url = K.formatUrl(url, 'absolute');
+						url = K.formatUrl(url, 'absolute','','uploads');
 					}
 					if (self.afterUpload) {
 						self.afterUpload.call(self, url, data, name);
